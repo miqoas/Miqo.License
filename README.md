@@ -9,7 +9,7 @@
 	:page_facing_up::closed_lock_with_key: The easy to use software licensing system for .NET
 </h3>
 <p align="center">
-<img src="https://ci.appveyor.com/api/projects/status/github/miqo-no/Miqo.License?branch=master&svg=true"/>
+<a href="https://ci.appveyor.com/project/natsuo/miqo-license"><img src="https://ci.appveyor.com/api/projects/status/github/miqo-no/Miqo.License?branch=master&svg=true"/></a>
 </p>
 
 ## [Overview](#overview)
