@@ -7,12 +7,13 @@
 		<PackageProjectUrl>https://github.com/miqo-no/Miqo.License/</PackageProjectUrl>
 		<PackageLicenseUrl>https://github.com/miqo-no/Miqo.License/LICENSE</PackageLicenseUrl>
 		<RepositoryUrl>https://github.com/miqo-no/Miqo.License/</RepositoryUrl>
+		<PackageIconUrl>https://github.com/miqo-no/Miqo.License/raw/master/.github/logo.png</PackageIconUrl>
 		<NeutralLanguage>en</NeutralLanguage>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<AssemblyVersion>1.1.0.1</AssemblyVersion>
 		<FileVersion>1.1.0.1</FileVersion>
 		<Version>1.1.0.1</Version>
-		<Description>📄🔐 The easy to use software licensing system for .NET 
+		<Description>📄🔐 The easy to use software licensing system for .NET
 
 Implement a licensing system that is easy to use into your application with Miqo.License. The library is cross platform and provides you with all the neccessary tools to issue, sign and verify the authenticity of a license.
 
