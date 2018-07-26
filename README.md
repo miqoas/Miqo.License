@@ -12,7 +12,7 @@
 <a href="https://ci.appveyor.com/project/natsuo/miqo-license"><img src="https://ci.appveyor.com/api/projects/status/github/miqo-no/Miqo.License?branch=master&svg=true"/></a>
 </p>
 
-## [Overview](#overview)
+## Overview
 
 Implement a licensing system that is easy to use into your application with Miqo.License. The library is cross platform and provides you with all the neccessary tools to issue, sign and verify the authenticity of a license.
 
@@ -30,7 +30,7 @@ The Miqo.License library makes it easy to:
 * You can add additional attributes to the license as needed.
 * Save as a JSON file or to a JSON formatted string.
 
-## [Installation](#installation)
+## Installation
 
 The library is available as a signed NuGet package.
 
@@ -38,7 +38,7 @@ The library is available as a signed NuGet package.
 PM> Install-Package Miqo.License
 ```
 
-## [Usage](#usage)
+## Usage
 
 ### Create a Private and Public Key for Your Product
 
@@ -144,7 +144,7 @@ byte[] publicKey = ECC.HexExtensions.ToHex(publicKeyHexString);
 string hex = ECC.HexExtensions.HexToBytes(publicKey)
 ```
 
-## [License File Format](#license-file-format)
+## License File Format
 
 This is an example of a license file created with Miqo.License:
 
@@ -166,13 +166,13 @@ This is an example of a license file created with Miqo.License:
 }
 ```
 
-## [Key Creation Tool](#key-creation-tool)
+## Key Creation Tool
 
 You can use the bundled [Key Creation Tool](./Miqo.License.CreateKeys) to quickly generate a new key pair in hex string format.
 
 ![Key Creation Tool](./.github/createkeys.png)
 
-## [Acknowledgements](#acknowledgements)
+## Acknowledgements
 
 Miqo.License was inspired by [Portable.Licensing](https://github.com/dnauck/Portable.Licensing) (by Daniel Nauck, Nauck IT) and uses some of the validation code.
 
@@ -181,6 +181,6 @@ Two other libraries are also used for the ECDSA part.
 * Signing is done using [Cryptography.ECDSA](https://github.com/Chainers/Cryptography.ECDSA) (by Chainers)
 * Signature verification is done using [ChainEngine.Cryptography.EcDsa.Secp256k1](https://github.com/uchaindb/Cryptography.EcDsa.Secp256k1) (by UChainDb)
 
-## [License](#license)
+## License
 
 Miqo.License is made available under the [MIT License](LICENSE).
