@@ -9,9 +9,16 @@
 		<RepositoryUrl>https://github.com/miqo-no/Miqo.License/</RepositoryUrl>
 		<NeutralLanguage>en</NeutralLanguage>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-		<AssemblyVersion>1.1.0.0</AssemblyVersion>
-		<FileVersion>1.1.0.0</FileVersion>
-		<Version>1.1.0</Version>
+		<AssemblyVersion>1.1.0.1</AssemblyVersion>
+		<FileVersion>1.1.0.1</FileVersion>
+		<Version>1.1.0.1</Version>
+		<Description>📄🔐 The easy to use software licensing system for .NET 
+
+Implement a licensing system that is easy to use into your application with Miqo.License. The library is cross platform and provides you with all the neccessary tools to issue, sign and verify the authenticity of a license.
+
+The license files are saved in JSON format, and is signed using a state-of-the-art Elliptic Curve Digital Signature Algorithm (ECDSA) to ensure that the license files can't be tampered with after creation.
+
+The library is available for .NET Standard 2.0 and .NET Framework 4.0 and higher. The tests project uses .NET Core 2.0.</Description>
 	</PropertyGroup>
 
 	<ItemGroup>
