@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.0;net40;net45;net461</TargetFrameworks>
+		<Authors>Miqo DA</Authors>
+		<Copyright>Copyright 2018 Miqo DA</Copyright>
+		<PackageId>Miqo.License</PackageId>
+		<PackageProjectUrl>https://github.com/miqo-no/Miqo.License/</PackageProjectUrl>
+		<PackageLicenseUrl>https://github.com/miqo-no/Miqo.License/LICENSE</PackageLicenseUrl>
+		<RepositoryUrl>https://github.com/miqo-no/Miqo.License/</RepositoryUrl>
+		<NeutralLanguage>en</NeutralLanguage>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<AssemblyVersion>1.1.0.0</AssemblyVersion>
+		<FileVersion>1.1.0.0</FileVersion>
+		<Version>1.1.0</Version>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+	</ItemGroup>
+</Project>
