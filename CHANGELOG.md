@@ -8,6 +8,7 @@ Note that AppVeyor build number and the Miqo.License release version numbers may
 
 ### Project documents
 
+* Adds CHANGELOG.md to project ([#1](https://github.com/miqo-no/Miqo.License/issues/1)) ([fb7e427](https://github.com/miqo-no/Miqo.License/commit/fb7e427849a9e5620c12c19ed960988ee0a0a4d9))
 * Add link to AppVeyor build log in README.md ([ea5b8bd](https://github.com/miqo-no/Miqo.License/commit/ea5b8bde53c7d077e3ab0ae14fdc619d017e37fa))
 * Add logo to NuGet package ([05b8bff](https://github.com/miqo-no/Miqo.License/commit/05b8bfff98d1de289eedc3e2643568e57445f325))
 * Remove links from README.md headers ([5b8c8d2](https://github.com/miqo-no/Miqo.License/commit/5b8c8d227d1052999bc53215c7eec6efb5459a93))
