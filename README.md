@@ -6,29 +6,34 @@
   <br>
 </h1>
 <h3 align="center">
-	:page_facing_up::closed_lock_with_key: The easy to use software licensing system for .NET
+	:page_facing_up::closed_lock_with_key: Creating and validating license keys
+	for your .NET application has never been so easy
 </h3>
 <p align="center">
-<a href="https://ci.appveyor.com/project/natsuo/miqo-license"><img src="https://ci.appveyor.com/api/projects/status/github/miqo-no/Miqo.License?branch=master&svg=true"/></a>
+<a href="https://ci.appveyor.com/project/natsuo/miqo-license"><img src="https://img.shields.io/appveyor/ci/natsuo/miqo-license.svg?style=for-the-badge"/></a> <a href="./LICENSE.md"></a> <img src=".github/mit.svg"/> <img src=".github/semver.svg"/>
 </p>
 
 ## Overview
 
-Implement a licensing system that is easy to use into your application with Miqo.License. The library is cross platform and provides you with all the neccessary tools to issue, sign and verify the authenticity of a license.
+Miqo.License provides you with all the neccessary tools to issue, sign and
+verify the authenticity of a license. License files are digitally signed
+using a state-of-the-art Elliptic Curve Digital Signature Algorithm (ECDSA)
+to ensure that the licenses cannot be tampered with after creation.
 
-The license files are saved in JSON format, and is signed using a state-of-the-art Elliptic Curve Digital Signature Algorithm (ECDSA) to ensure that the license files can't be tampered with after creation.
-
-The library is available for .NET Standard 2.0 and .NET Framework 4.0 and higher. The tests project uses .NET Core 2.0.
+The library is available for .NET Standard 2.0 and .NET Framework 4.0 and
+higher. The tests project uses .NET Core 2.0. Both the library and the NuGet package are signed.
 
 ### Features
 
 The Miqo.License library makes it easy to:
 
-* Easily and securely create, sign and validate your licenses.
+* Securely create, sign and validate your licenses.
 * Support various license types/models including trial, standard, personal, etc.
 * Enable/disable product features.
-* You can add additional attributes to the license as needed.
+* Add additional attributes to the license as needed.
 * Save as a JSON file or to a JSON formatted string.
+
+![](./.github/animation.gif)
 
 ## Installation
 
@@ -42,9 +47,14 @@ PM> Install-Package Miqo.License
 
 ### Create a Private and Public Key for Your Product
 
-Before you can sign a license file, you'll need a private and public key. Miqo.License uses an Elliptic Curve Digital Signature Algorithm (ECDSA) to ensure that the license files can't be tampered with after creation. The private key is used to sign the license file, and the public key is used to verify the authenticity of the license.
+Before signing a license file, you'll need a private and public key.
+Miqo.License uses an Elliptic Curve Digital Signature Algorithm (ECDSA) to
+ensure that the license files can't be tampered with after creation. The
+private key is used to sign the license file, and the public key is used to
+verify the authenticity of the license.
 
-You can use the bundled [Key Creation Tool](#key-creation-tool) or create a new pair in code using ```Signer()``` like this:
+You can use the bundled [Key Creation Tool](#key-creation-tool) or create a
+new pair using ```Signer()``` like this:
 
 ```csharp
 var signer = new Miqo.License.ECC.Signer();
@@ -52,13 +62,18 @@ var privateKey = signer.PrivateKey;
 var publicKey = signer.PublicKey;
 ```
 
-You can use ```Signer(privateKeyString)``` to provide a previously generated private key.
+Use ```Signer(privateKeyString)``` to provide a previously generated private
+key.
 
-The private key should be stored securely and should be unique for each of your products. The public key is distributed with your software. If you want your customer to buy a new license on each major release you can create a key pair for each release and product.
+The private key should be stored securely and should be unique for each of
+your products. The public key is distributed with your software. If you want
+your customer to buy a new license on each major release you can create a
+key pair for each release and product.
 
 ### Create a New License
 
-After generating the key pairs for your product you are ready to create a new license. The easiest way to do this is to use the FluentLicense class.
+After generating the key pairs for your product you are ready to create a new
+license. The easiest way to do this is to use the FluentLicense class.
 
 ```csharp
 var license = FluentLicense.CreateLicense()
@@ -80,7 +95,8 @@ The license is now signed and you are ready to save it as a JSON file:
 license.Save("ChewingGum.License");
 ```
 
-If you would like to store the license file in a database or other fashion, you can use:
+If you would like to store the license file in a database or other fashion, you
+can use:
 
 ```csharp
 var jsonString = license.ToJsonString();
@@ -116,7 +132,8 @@ var validationFailures = license.Validate()
 	.AssertValidLicense();
 ```
 
-Miqo.License will not throw any exceptions when a validation fails, but will rather return an enumeration of validation failures.
+Miqo.License will not throw any exceptions when a validation fails, but will
+rather return an enumeration of validation failures.
 
 Simply check if there is any failure:
 
@@ -133,11 +150,14 @@ foreach (var failure in validationFailures) {
 }
 ```
 
-Use ```validationFailures.ToList();``` before attempting to use the result multiple times.
+Use ```validationFailures.ToList();``` before attempting to use the result
+multiple times.
 
 ### Converting between ```byte[]``` and hex ```string```
 
-Note that Miqo.License uses ```byte[]``` for the private and public keys. You can use the ```HexExtensions``` extension class to quickly convert between the ```byte[]``` and hex ```string```.
+Note that Miqo.License uses ```byte[]``` for the private and public keys. You
+can use the ```HexExtensions``` extension class to quickly convert between
+the ```byte[]``` and hex ```string```.
 
 ```csharp
 byte[] publicKey = ECC.HexExtensions.ToHex(publicKeyHexString);
@@ -146,7 +166,7 @@ string hex = ECC.HexExtensions.HexToBytes(publicKey)
 
 ## License File Format
 
-This is an example of a license file created with Miqo.License:
+The license file is saved in standard JSON format.
 
 ```json
 {
@@ -168,13 +188,15 @@ This is an example of a license file created with Miqo.License:
 
 ## Key Creation Tool
 
-You can use the bundled [Key Creation Tool](./Miqo.License.CreateKeys) to quickly generate a new key pair in hex string format.
+You can use the bundled [Key Creation Tool](./Miqo.License.CreateKeys) to
+quickly generate a new key pair in hex string format.
 
 ![Key Creation Tool](./.github/createkeys.png)
 
 ## Acknowledgements
 
-Miqo.License was inspired by [Portable.Licensing](https://github.com/dnauck/Portable.Licensing) (by Daniel Nauck, Nauck IT) and uses some of the validation code.
+Miqo.License was inspired by [Portable.Licensing](https://github.com/dnauck/Portable.Licensing)
+(by Daniel Nauck, Nauck IT) and uses some of the validation code.
 
 Two other libraries are also used for the ECDSA part.
 
