@@ -10,7 +10,10 @@
 	for your .NET application has never been so easy
 </h3>
 <p align="center">
-<a href="https://ci.appveyor.com/project/natsuo/miqo-license"><img src="https://img.shields.io/appveyor/ci/natsuo/miqo-license.svg?style=for-the-badge"/></a> <a href="./LICENSE.md"></a> <img src=".github/mit.svg"/> <img src=".github/semver.svg"/>
+<a href="https://ci.appveyor.com/project/natsuo/miqo-license"><img src="https://img.shields.io/appveyor/ci/natsuo/miqo-license.svg?style=for-the-badge&logo=appveyor"/></a>
+<a href="https://travis-ci.org/miqo-no/Miqo.License"><img src="https://img.shields.io/travis/miqo-no/Miqo.License.svg?style=for-the-badge&logo=travis"></a>
+<a href="./LICENSE.md"><img src=".github/mit.svg"/></a>
+<a href="https://semver.org/"><img src=".github/semver.svg"/></a>
 </p>
 
 ## Overview
