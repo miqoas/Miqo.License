@@ -1,6 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
-	<PropertyGroup>
+	<PropertyGroup Condition=" '$(OS)' != 'Windows_NT' ">
+		<TargetFramework>netstandard2.0</TargetFramework>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
 		<TargetFrameworks>netstandard2.0;net40;net45;net461</TargetFrameworks>
+	</PropertyGroup>
+	<PropertyGroup>
 		<Authors>Miqo DA</Authors>
 		<Copyright>Copyright 2018 Miqo DA</Copyright>
 		<PackageId>Miqo.License</PackageId>
