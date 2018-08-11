@@ -1,33 +1,32 @@
 <Project Sdk="Microsoft.NET.Sdk">
-	<PropertyGroup Condition=" '$(OS)' != 'Windows_NT' ">
-		<TargetFramework>netstandard2.0</TargetFramework>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
-		<TargetFrameworks>netstandard2.0;net40;net45;net461</TargetFrameworks>
-	</PropertyGroup>
-	<PropertyGroup>
-		<Authors>Miqo DA</Authors>
-		<Copyright>Copyright 2018 Miqo DA</Copyright>
-		<PackageId>Miqo.License</PackageId>
-		<PackageProjectUrl>https://github.com/miqo-no/Miqo.License/</PackageProjectUrl>
-		<PackageLicenseUrl>https://github.com/miqo-no/Miqo.License/LICENSE</PackageLicenseUrl>
-		<RepositoryUrl>https://github.com/miqo-no/Miqo.License/</RepositoryUrl>
-		<PackageIconUrl>https://github.com/miqo-no/Miqo.License/raw/master/.github/logo.png</PackageIconUrl>
-		<NeutralLanguage>en</NeutralLanguage>
-		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-		<AssemblyVersion>1.1.0.1</AssemblyVersion>
-		<FileVersion>1.1.0.1</FileVersion>
-		<Version>1.1.0.1</Version>
-		<Description>📄🔐 The easy to use software licensing system for .NET
+  <PropertyGroup Condition=" '$(OS)' != 'Windows_NT' ">
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
+    <TargetFrameworks>netstandard2.0;net40;net45;net461</TargetFrameworks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Authors>Miqo DA</Authors>
+    <Copyright>Copyright 2018 Miqo DA</Copyright>
+    <PackageId>Miqo.License</PackageId>
+    <PackageProjectUrl>https://github.com/miqo-no/Miqo.License/</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/miqo-no/Miqo.License/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/miqo-no/Miqo.License/</RepositoryUrl>
+    <PackageIconUrl>https://github.com/miqo-no/Miqo.License/raw/master/.github/logo.png</PackageIconUrl>
+    <NeutralLanguage>en</NeutralLanguage>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <AssemblyVersion>1.1.1</AssemblyVersion>
+    <FileVersion>1.1.1</FileVersion>
+    <Version>1.1.1</Version>
+    <Description>📄🔐 The easy to use software licensing system for .NET
 
 Implement a licensing system that is easy to use into your application with Miqo.License. The library is cross platform and provides you with all the neccessary tools to issue, sign and verify the authenticity of a license.
 
 The license files are saved in JSON format, and is signed using a state-of-the-art Elliptic Curve Digital Signature Algorithm (ECDSA) to ensure that the license files can't be tampered with after creation.
 
 The library is available for .NET Standard 2.0 and .NET Framework 4.0 and higher. The tests project uses .NET Core 2.0.</Description>
-	</PropertyGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-	</ItemGroup>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
 </Project>

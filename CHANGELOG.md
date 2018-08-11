@@ -4,7 +4,11 @@ All notable changes to this project will be documented in this file.
 
 Note that AppVeyor build number and the Miqo.License release version numbers may not be in sync.
 
-## Unreleased
+## [v1.1.1](https://github.com/miqo-no/Miqo.License/releases/tag/v1.1.1) (2017-08-11)
+
+### Bug fixes
+
+* Add Conditional TargetFramework to .csproj ([703615b](https://github.com/miqo-no/Miqo.License/commit/703615b85f7b7b6695d13ca9182fbe1c947b14c7))
 
 ### Project documents
 
