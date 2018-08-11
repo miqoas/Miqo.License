@@ -18,7 +18,7 @@
     <AssemblyVersion>1.1.1</AssemblyVersion>
     <FileVersion>1.1.1</FileVersion>
     <Version>1.1.1</Version>
-    <Description>📄🔐 The easy to use software licensing system for .NET
+    <Description>📄🔐 Creating and validating license keys for your .NET application has never been so easy
 
 Implement a licensing system that is easy to use into your application with Miqo.License. The library is cross platform and provides you with all the neccessary tools to issue, sign and verify the authenticity of a license.
 
